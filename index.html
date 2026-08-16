@@ -440,19 +440,29 @@ src="https://www.facebook.com/tr?id=1703002770987021&ev=PageView&noscript=1"
             pointer-events: none;
         }
 
-        /* Primary button — Telegram styled */
+        /* Primary button — Premium styled */
         .btn-primary {
-            background: linear-gradient(135deg, #2AABEE, #229ED9);
+            background: linear-gradient(135deg, var(--neon-gold), var(--neon-red), var(--neon-violet));
+            background-size: 200% 200%;
             color: #fff;
-            box-shadow: 0 8px 24px rgba(42, 171, 238, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+            box-shadow: 0 8px 30px rgba(192, 64, 251, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+            animation: btnGradient 3s ease infinite, btnPulse 2s infinite;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 900;
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
-        /* Secondary button — Telegram outline */
-        .btn-secondary {
-            background: linear-gradient(135deg, #1a1a30, #12122a);
-            color: #fff;
-            border: 1.5px solid rgba(42, 171, 238, 0.6);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), 0 0 22px rgba(42, 171, 238, 0.2);
+        @keyframes btnGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes btnPulse {
+            0% { box-shadow: 0 0 20px rgba(245, 200, 66, 0.4); }
+            50% { box-shadow: 0 0 40px rgba(192, 64, 251, 0.8), 0 0 20px rgba(255, 59, 59, 0.6); }
+            100% { box-shadow: 0 0 20px rgba(245, 200, 66, 0.4); }
         }
 
         .btn svg {
@@ -590,14 +600,6 @@ src="https://www.facebook.com/tr?id=1703002770987021&ev=PageView&noscript=1"
             <div class="buttons">
                 <a href="https://telegram.me/+ipVzMAtm07M2OTgx" class="btn btn-primary" target="_blank" rel="noopener"
                     onclick="fbq('track', 'Subscribe');">
-                    <svg viewBox="0 0 24 24" fill="#ffffff">
-                        <path
-                            d="M21.94 4.63c.27-1.13-.87-2.03-1.9-1.57L2.72 10.6c-1.1.49-1.09 2.06.02 2.53l4.5 1.9 1.7 5.48c.24.77 1.22 1 1.8.42l2.53-2.5 4.6 3.4c.83.62 2.02.18 2.25-.83L21.94 4.63zM8.8 13.7l9.4-6.34c.28-.19.58.17.34.4l-7.9 7.4c-.28.26-.46.61-.5.99l-.24 2.16-1.1-4.61z" />
-                    </svg>
-                    JOIN FREE CHANNEL
-                </a>
-                <a href="https://telegram.me/+ipVzMAtm07M2OTgx" class="btn btn-secondary" target="_blank"
-                    rel="noopener">
                     <svg viewBox="0 0 24 24" fill="#ffffff">
                         <path
                             d="M21.94 4.63c.27-1.13-.87-2.03-1.9-1.57L2.72 10.6c-1.1.49-1.09 2.06.02 2.53l4.5 1.9 1.7 5.48c.24.77 1.22 1 1.8.42l2.53-2.5 4.6 3.4c.83.62 2.02.18 2.25-.83L21.94 4.63zM8.8 13.7l9.4-6.34c.28-.19.58.17.34.4l-7.9 7.4c-.28.26-.46.61-.5.99l-.24 2.16-1.1-4.61z" />
